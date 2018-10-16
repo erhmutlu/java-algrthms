@@ -32,4 +32,8 @@ public class BinarySearchAlgorithm{
     private static int calculateMid(int lower, int upper){
         return lower + ((upper - lower) / 2);
     }
+
+    public static void main(String[] args) {
+        System.out.println((6 >> 1));
+    }
 }
