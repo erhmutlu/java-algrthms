@@ -25,6 +25,23 @@ public class TreeHelper {
         return root;
     }
 
+    public static Node prepareUnbalancedTree() {
+        Node root = prepareNode(20);
+
+        Node node8 = prepareNode(8);
+        node8.setLeftChild(prepareNode(4));
+
+        Node node12 = prepareNode(12);
+        node12.setLeftChild(prepareNode(10));
+        node12.setRightChild(prepareNode(14));
+
+        node8.setRightChild(node12);
+
+        root.setLeftChild(node8);
+        root.setRightChild(prepareNode(22));
+        return root;
+    }
+
     private static Node prepareNode(Integer value) {
         Node node = new Node();
         node.setValue(value);
